@@ -28,9 +28,9 @@ app.get('/health', (req, res) => {
 app.use(documentRoutes);
 
 app.use((error, _request, response, _next) => {
-  const isFileTooLarge = error instanceof multer.MulterError
-    && error.code === 'LIMIT_FILE_SIZE';
-  const status = isFileTooLarge ? 413 : (error.status || 500);
+  const isMulterError = error instanceof multer.MulterError;
+  const isFileTooLarge = isMulterError && error.code === 'LIMIT_FILE_SIZE';
+  const status = isFileTooLarge ? 413 : (isMulterError ? 400 : (error.status || 500));
   const code = isFileTooLarge ? 'FILE_TOO_LARGE' : (error.code || 'INTERNAL_ERROR');
   const message = status === 500
     ? 'Não foi possível processar a solicitação.'
