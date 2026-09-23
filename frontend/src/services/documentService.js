@@ -1,3 +1,5 @@
+// Centraliza as requisições de upload, listagem e download feitas à API de documentos.
+
 const API_PREFIX = '/api';
 
 async function getErrorMessage(response) {

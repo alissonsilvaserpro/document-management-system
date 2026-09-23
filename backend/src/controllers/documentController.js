@@ -1,3 +1,5 @@
+// Converte requisições HTTP de documentos em chamadas ao serviço e respostas da API.
+
 const documentService = require('../services/documentService');
 
 function getUserId(request) {

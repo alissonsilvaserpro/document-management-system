@@ -1,3 +1,5 @@
+// Verifica o contrato básico de exportação da aplicação Express.
+
 const { test } = require('node:test');
 const assert = require('node:assert');
 const app = require('../src/app');

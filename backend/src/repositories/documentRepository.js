@@ -1,3 +1,5 @@
+// Mantém metadados em memória e configura o armazenamento local dos arquivos.
+
 const { randomUUID } = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');

@@ -1,3 +1,5 @@
+// Aplica as regras de negócio de criação, listagem e download de documentos.
+
 const { randomUUID } = require('node:crypto');
 const documentRepository = require('../repositories/documentRepository');
 

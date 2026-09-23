@@ -1,3 +1,5 @@
+// Define as rotas de documentos e configura o middleware de upload com Multer.
+
 const express = require('express');
 const multer = require('multer');
 const documentController = require('../controllers/documentController');
